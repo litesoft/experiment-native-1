@@ -1,0 +1,25 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.5'
+	id 'org.springframework.experimental.aot' version '0.10.4'
+}
+
+apply plugin: 'java'
+apply plugin: 'io.spring.dependency-management'
+
+repositories {
+	mavenCentral()
+	maven { url 'https://repo.spring.io/release' }
+}
+
+group = 'org.litesoft'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+	useJUnitPlatform()
+}
